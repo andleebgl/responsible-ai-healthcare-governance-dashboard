@@ -1,16 +1,31 @@
-Research Note: Responsible AI Risks in Healthcare Use Cases
-This research note was developed independently based on my voluntary responsible AI research work and interest in healthcare AI governance.
-1. LLMs in Clinical Decision Support
+# Research Note: Responsible AI Risks in Healthcare Use Cases
+
+*This research note was developed independently based on my voluntary responsible AI research work and interest in healthcare AI governance.*
+
+## 1. LLMs in Clinical Decision Support
+
 Large language models are increasingly being explored for clinical tasks such as summarising patient notes, drafting referral letters, and suggesting diagnoses. The primary risk is hallucination, where the model generates confident but incorrect information. In a clinical setting, a hallucinated medication name or fabricated test result could directly harm a patient. LLMs also lack the ability to say "I don't know," which makes them particularly dangerous in high stakes medical contexts where uncertainty should be communicated clearly.
-2. Patient Data Privacy
+
+## 2. Patient Data Privacy
+
 Healthcare AI systems frequently require access to electronic health records, patient messages, and clinical documentation. This creates significant privacy risks under UK GDPR and the Data Protection Act 2018. Key concerns include whether patient data is processed locally or sent to external cloud services, whether data is properly anonymised before being used for model training, and whether patients have given informed consent for their data to be used by AI systems. Any AI use case touching patient data must have clear data processing agreements and privacy impact assessments in place.
-3. Human Oversight
+
+## 3. Human Oversight
+
 The principle of human oversight requires that a qualified person reviews AI outputs before they are acted upon in clinical settings. This is particularly important for use cases such as triage, diagnosis support, and prescribing, where an incorrect AI output could cause direct patient harm. Human oversight does not mean a human simply clicks "approve" on every output. It means the reviewer has the expertise, time, and information to genuinely evaluate whether the AI output is correct and appropriate for the individual patient.
-4. Bias in Triage and Prediction Systems
+
+## 4. Bias in Triage and Prediction Systems
+
 AI models trained on historical healthcare data risk inheriting existing inequalities. For example, a readmission prediction model may learn that patients from deprived areas are readmitted more often, not because of clinical need but because of social factors like poor housing or lack of community support. If the model then flags these patients as high risk, it could lead to over-intervention for some groups and under-intervention for others. Bias audits must test model performance across demographic groups including age, ethnicity, sex, and deprivation to ensure fair outcomes.
-5. Explainability in High Stakes Decisions
+
+## 5. Explainability in High Stakes Decisions
+
 When AI supports decisions that affect patient care, clinicians and patients have a right to understand why a particular recommendation was made. A model that says "this patient is high risk" without explaining which factors drove that assessment is not suitable for clinical use. Explainability techniques such as feature importance scores, decision trees, and natural language explanations help build trust and allow clinicians to exercise proper judgement rather than blindly following an algorithm.
-6. Governance Controls
+
+## 6. Governance Controls
+
 Effective AI governance in healthcare requires a structured set of controls including audit trails that log AI inputs and outputs for review, model monitoring to track accuracy and drift over time, data anonymisation protocols to protect patient privacy, human review processes with clear escalation paths, bias audits conducted before deployment and at regular intervals, and impact assessments that evaluate both clinical and operational consequences. These controls should be documented in a risk register and reviewed at regular governance board meetings.
-7. Regulatory Context
+
+## 7. Regulatory Context
+
 The EU AI Act classifies medical device AI and clinical decision support systems as high risk, requiring conformity assessments, transparency obligations, and human oversight guarantees. The WHO guidance on AI ethics in health emphasises inclusiveness, transparency, accountability, and the protection of human autonomy. While the UK is not directly subject to the EU AI Act, organisations operating in healthcare are expected to align with these principles through frameworks such as the NHS AI Lab guidance and the MHRA regulatory sandbox for AI as a medical device. Any AI governance framework in healthcare should be designed with these regulatory expectations in mind.
